@@ -8,7 +8,7 @@ export function setAbortController(onStop) {
   };
 
   signal.addEventListener("abort", () => {
-    console.log("请求已取消");
+    console.log("AbortController: aborted");
   });
 
   return { controller, disconnect, signal };

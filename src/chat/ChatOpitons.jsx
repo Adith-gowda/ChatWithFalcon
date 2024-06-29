@@ -53,7 +53,7 @@ export function ChatOpitons() {
             <Select value={general.language} onChange={val => setGeneral({ language: val })} options={languageOptions} placeholder="language" />
           </Panel.Item>
           <Panel.Item icon="config" title="FontSize" desc="userFace font size">
-            <Select value={general.size} onChange={val => setGeneral({ size: val })} options={sizeOptions} placeholder="OpenAI ApiKey" />
+            <Select value={general.size} onChange={val => setGeneral({ size: val })} options={sizeOptions} placeholder="Font size" />
           </Panel.Item>
         </Panel>
       </div>

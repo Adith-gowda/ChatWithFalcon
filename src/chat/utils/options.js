@@ -55,15 +55,7 @@ export const languageOptions = [
   {
     label: "English",
     value: "en",
-  },
-  {
-    label: "简体中文",
-    value: "zh",
-  },
-  {
-    label: "日本",
-    value: "jp",
-  },
+  }
 ];
 
 export const sizeOptions = [
