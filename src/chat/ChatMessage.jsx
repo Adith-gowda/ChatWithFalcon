@@ -26,9 +26,7 @@ export function MessageHeader() {
       <div className={styles.header_bar}>
         <Icon className={styles.icon} type={options.general.theme} onClick={() => setGeneral({ theme: options.general.theme === 'light' ? 'dark' : 'light' })} />
         <Icon className={styles.icon} type="clear" onClick={clearMessage} />
-        <Popover position="bottom">
-          <Icon className={styles.icon} type="more" />
-        </Popover>
+        <Icon className={styles.icon} type="more" />
         <Icon type="download" className={styles.icon} />
       </div>
     </div>
@@ -74,6 +72,21 @@ export function MessageItem(props) {
 export function MessageBar() {
   const { sendMessage, setMessage, is, options, setIs, typeingMessage, clearTypeing, stopResonse } = useGlobal()
   useSendKey(sendMessage, options.general.command)
+
+  const [temp, setTemp] = React.useState('')
+
+  const check= () => {
+    setMessage(temp);
+  }
+
+  React.useEffect(() => {
+    if(typeingMessage?.content){
+      sendMessage();
+    }
+  }
+  , [typeingMessage?.content])
+
+
   return (
     <div className={styles.bar}>
       {is.thinking && <div className={styles.bar_tool}>
@@ -83,7 +96,7 @@ export function MessageBar() {
       </div>}
       <div className={styles.bar_inner}>
         <div className={styles.bar_type}>
-          <Textarea transparent={true} rows="3" value={typeingMessage?.content || ''} onFocus={() => setIs({ inputing: true })} onBlur={() => setIs({ inputing: false })} placeholder="Enter somthing...." onChange={setMessage} />
+          <Textarea transparent={true} rows="3" value={temp || ''} onFocus={() => setIs({ inputing: true })} onBlur={() => setIs({ inputing: false })} placeholder="Enter somthing...." onChange={(e) => setTemp(e)} id="searchInput" />
         </div>
         <div className={styles.bar_icon}>
           {typeingMessage?.content &&
@@ -93,7 +106,7 @@ export function MessageBar() {
           <Tooltip text="history">
             <Icon className={styles.icon} type="history" />
           </Tooltip>
-          <Icon className={styles.icon} type="send" onClick={sendMessage} />
+          <Icon className={styles.icon} type="send" onClick={check} />
         </div>
       </div>
     </div>
@@ -104,7 +117,7 @@ export function MessageContainer() {
   const { options } = useGlobal()
   const { message } = useMesssage()
   const { messages = [] } = message || {}
-  console.log(messages)
+  // console.log(messages)
   return (
     // <>
     // <ChatHelp />
