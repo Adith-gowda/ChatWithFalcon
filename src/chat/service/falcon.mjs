@@ -21,7 +21,7 @@ export const fetchAction = async ({
 }) => {
   console.log(messages[messages.length-1].content,);
 
-  const ngrokURL = "https://37d1-34-168-132-54.ngrok-free.app";
+  const ngrokURL = "https://5ff4-34-125-220-233.ngrok-free.app";
 
   const data = {
     "inputs" : messages[messages.length-1].content,
@@ -46,7 +46,7 @@ export const fetchAction = async ({
 
     const responseData = await response.json();
     const generatedText = responseData.generated_text; // Adjust according to your actual response structure
-
+    // const newans = generatedText.split("User:")[0];
     return generatedText;
   } catch (error) {
     console.error("Error fetching data:", error);

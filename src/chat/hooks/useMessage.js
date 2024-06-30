@@ -3,7 +3,7 @@ import { useGlobal } from "../context";
 
 export function useMesssage() {
   const { currentChat, chat, is } = useGlobal();
-  console.log(chat, currentChat, is.thinking)
+  // console.log(chat, currentChat, is.thinking)
   const [message, setMessage] = useState({ messages: [] });
   useEffect(() => {
     if (chat.length) {
