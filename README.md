@@ -34,8 +34,9 @@ Falcon 7B Instruct Chatbot leverages advanced AI models to deliver accurate and 
 ## Technologies Used
 
 - **Frontend:** React JS
-- **Backend:** FAST API, NGROK
-- **AI Models:** Falcon 7B Instruct model, RAG (Retrieval-Augmented Generation) model
+- **Backend:** FastAPI and NGROK
+- **Frameworks:** LangChain, RAG (Retrieval-Augmented Generation) technique and FastAPI
+- **AI Models:** Falcon 7B Instruct model and multilingual-e5-large-instruct model.
 - **Database:** FAISS (Facebook AI Similarity Search)
 - **Deployment:** Google Colab for backend GPU processing
 
