@@ -22,10 +22,7 @@ export function ConfigHeader() {
 
 export function ChatOpitons() {
   const { options } = useGlobal()
-  const { account, openai, general } = options
-  // const { avatar, name } = account
-  // const { theme, language, command, size } = general
-  // const { max_tokens, apiKey, temperature, baseUrl, organizationId, top_p, model } = openai
+  const { account, general } = options
   const { setAccount, setGeneral} = useOptions()
   return (
     <div className={classnames(styles.config, 'flex-c-sb flex-column')}>

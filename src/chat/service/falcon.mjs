@@ -21,7 +21,7 @@ export const fetchAction = async ({
 }) => {
   console.log(messages[messages.length-1].content,);
 
-  const ngrokURL = "https://5ff4-34-125-220-233.ngrok-free.app";
+  const ngrokURL = "https://71fd-34-145-78-108.ngrok-free.app";
 
   const data = {
     "inputs" : messages[messages.length-1].content,

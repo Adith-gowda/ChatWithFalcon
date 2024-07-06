@@ -25,7 +25,7 @@ export const initState = {
   currentChat: 0,
   options: {
     account: {
-      name: "ChatPilot",
+      name: "ChatWithFalcon",
       avatar: "",
     },
     general: {
