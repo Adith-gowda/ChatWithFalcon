@@ -15,7 +15,9 @@ Falcon 7B Instruct Chatbot is an advanced conversational AI designed to provide 
 
 ## Demo
 
-link--
+Watch the demo video below:
+
+[Watch the video](https://drive.google.com/file/d/1WS44zNSthMuTeBhWsE-WUNv3nru-4IwA/view?usp=sharing)
 
 ## Overview
 
