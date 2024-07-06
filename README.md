@@ -1,4 +1,4 @@
-# Falcon 7B Instruct Chatbot
+# ChatWithFalcon - Falcon 7B Instruct Chatbot
 
 Falcon 7B Instruct Chatbot is an advanced conversational AI designed to provide up-to-date answers using current data, overcoming limitations of older models like ChatGPT 3.5 ( Overcomed by ChatGPT-4o ). It integrates the Falcon 7B Instruct model and RAG model for knowledge retrieval and answering user queries based on real-time information.
 
